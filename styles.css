@@ -37,29 +37,56 @@ body {
   border: 0;
 }
 .todo__item {
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
   padding: 1rem 1.2rem;
-  border-bottom: 2px solid #D49A3F;
+  border-bottom: 2px solid #d49a3f;
   transition: 0.3s all ease;
 }
 .todo__item:hover {
   cursor: default;
 }
+
+.closeBtn {
+  height: 25px;
+  width: 25px;
+  border: none;
+  border-radius: 4px;
+  background: #d49a3f;
+  color: #fff;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.closeBtn::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  height: 2px;
+  width: 15px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.closeBtn::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  height: 2px;
+  width: 15px;
+  background: #fff;
+  transform: rotate(135deg);
+}
+
+.closeBtn:hover {
+  cursor: pointer;
+}
+
 .done {
   text-decoration: line-through;
   border-bottom: 2px solid rgb(65, 52, 32);
   color: #aaa;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
